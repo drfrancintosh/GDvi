@@ -1,0 +1,32 @@
+set(PROJECT gdvi)
+
+add_executable(${PROJECT}
+	main.c
+	gdvi.c
+	bitwise.c
+	fatbitwise.c
+	gfx.c
+	ls7447.c
+)
+
+target_compile_definitions(${PROJECT} PRIVATE
+DVI_DEFAULT_SERIAL_CONFIG=${DVI_DEFAULT_SERIAL_CONFIG}
+DVI_VERTICAL_REPEAT=1
+DVI_N_TMDS_BUFFERS=4
+DVI_SYMBOLS_PER_WORD=2
+PICO_CORE1_STACK_SIZE=0x400
+PICO_SCANVIDEO_DPI
+)
+
+target_link_libraries(${PROJECT}
+	pico_stdlib
+	pico_multicore
+	libdvi
+	# pico_stdio_usb
+)
+
+pico_enable_stdio_usb(${PROJECT} 1)
+pico_enable_stdio_uart(${PROJECT} 0)
+
+# create map/bin/hex file etc.
+pico_add_extra_outputs(${PROJECT})
