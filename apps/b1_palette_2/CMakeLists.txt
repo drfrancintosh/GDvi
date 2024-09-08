@@ -3,7 +3,7 @@ cmake_policy(SET CMP0079 NEW)
 set(FAMILY rp2040)
 include($ENV{PICO_SDK_PATH}/external/pico_sdk_import.cmake)
 
-set(PROJECT hello_world)
+set(PROJECT pallette_2)
 project(${PROJECT})
 pico_sdk_init()
 
@@ -27,6 +27,7 @@ target_link_libraries(${PROJECT} PUBLIC
     pico_stdlib
     pico_multicore
     pico_unique_id
+    pico_rand
     hardware_i2c
     libdvi
     libgdvi

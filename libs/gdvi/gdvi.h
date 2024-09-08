@@ -24,6 +24,8 @@ typedef enum {
     GDVI_CYAN = 3,
     GDVI_RED = 4,
     GDVI_MAGENTA = 5,
+    GDVI_VIOLET = 5,
+    GDVI_PURPLE = 5,
     GDVI_YELLOW = 6,
     GDVI_WHITE = 7,
 } GDviColor;
