@@ -57,3 +57,8 @@ void gfx_box(GDvi *gdvi, int x0, int y0, int x1, int y1, int color) {
     gfx_line(gdvi, x0, y1, x0, y0, color);
 }
 
+void gfx_box_fill(GDvi *gdvi, int x0, int y0, int x1, int y1, int color) {
+    for(int y=y0; y<=y1; y++) {
+        gfx_line(gdvi, x0, y, x1, y, color);
+    }
+}

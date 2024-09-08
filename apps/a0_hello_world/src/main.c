@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include "ls7447.h"
 
-#define COLOR(r,g,b) ((r << 11) | (g << 5) | (b))
+/**
+ * simple hello world program demonstrating the GDvi library
+ */
 
 const uint BOARD_LED_PIN = 25; // Example: GPIO 25, which is connected to the onboard LED
 int state = 1;
