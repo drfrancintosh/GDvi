@@ -127,3 +127,5 @@ Future projects may expand GDvi to take advantage of Wren's cooperative core pro
 ## Future Work
 
 - Add a way to synchronize CORE-0 with CORE-1 so that the display is not updated during a raster scan (causing fractured displays)
+
+test
